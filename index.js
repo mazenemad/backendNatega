@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-const FILE_PATH = './data.xlsx'; // Define the fixed file path
+const FILE_PATH = '/data.xlsx'; // Define the fixed file path
 
 // Endpoint to search in the XLSX file
 app.post('/search', (req, res) => {
