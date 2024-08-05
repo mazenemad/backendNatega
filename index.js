@@ -1,11 +1,12 @@
 const express = require('express');
 const XLSX = require('xlsx');
+const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-const FILE_PATH = '/data.xlsx'; // Define the fixed file path
+const FILE_PATH = path.join(__dirname, 'data.xlsx'); // Ensure the correct path
 
 // Endpoint to search in the XLSX file
 app.post('/search', (req, res) => {
